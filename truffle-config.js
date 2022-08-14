@@ -1,5 +1,8 @@
-require('bable-register');
-require('bable-polyfill');
+require("@babel/register");
+
+module.exports = {
+    entry: ["@babel/polyfill", "./app/js"],
+  };
 
 module.export= {
     networks: {
@@ -9,6 +12,8 @@ module.export= {
             network_id: '*' // match any network
         },
     },
+
+    
 
     contracts_directory: './src/contracts',
     contracts_build_directory: './src/truffle_abis',
